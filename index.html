@@ -447,7 +447,7 @@
   }
   .work-stat span {
     font-family: 'Playfair Display', serif;
-    font-size: 20px; font-weight: 900;
+    font-size: 26px; font-weight: 900;
     color: var(--terra); display: block;
     margin-bottom: 2px;
   }
@@ -1241,9 +1241,16 @@
 
     <div class="num-card">
       <span class="nc-platform jar-pill">JAR</span>
-      <span class="nc-num">7,89,461</span>
+      <span class="nc-num" style="font-size: clamp(36px,3.5vw,56px); color: #c89fe0;">7,89,461</span>
       <div class="nc-title">App Installs</div>
-      <div class="nc-desc">Performance creatives produced for <span class="nc-highlight">Jar</span> directly drove 7.89 lakh app installs.</div>
+      <div class="nc-desc">Performance creatives produced for <span class="nc-highlight">Jar</span> directly drove 7.89 lakh app installs across Meta and Google campaigns.</div>
+    </div>
+
+    <div class="num-card">
+      <span class="nc-platform jar-pill">JAR</span>
+      <span class="nc-num">1M+ Views</span>
+      <div class="nc-title">Per Shortform Video</div>
+      <div class="nc-desc">Multiple shortform videos produced for <span class="nc-highlight">Jar's social channels</span> individually crossed 1 million views. Each video, not combined — millions per piece.</div>
     </div>
 
     <div class="num-card">
@@ -1262,16 +1269,16 @@
 
     <div class="num-card">
       <span class="nc-platform yt-pill">YOUTUBE</span>
-      <span class="nc-num">3 videos</span>
-      <div class="nc-title">Crossed 1 Lakh Views at Jar</div>
-      <div class="nc-desc">Long form videos scripted and hosted on <span class="nc-highlight">Jar's Telugu YouTube channel</span>. Brand content crossing 1 lakh views organically is rare. This happened 3 times.</div>
+      <span class="nc-num">3 Videos</span>
+      <div class="nc-title">Each Crossed 1 Lakh Views at Jar</div>
+      <div class="nc-desc">Long-form videos scripted and hosted on <span class="nc-highlight">Jar's Telugu YouTube channel</span>. For brand content to cross 1 lakh views organically is rare — did it 3 separate times.</div>
     </div>
 
     <div class="num-card">
       <span class="nc-platform yt-pill">YOUTUBE</span>
-      <span class="nc-num">6 videos</span>
-      <div class="nc-title">Crossed 50K Views at Jar</div>
-      <div class="nc-desc">6 videos crossing <span class="nc-highlight">50K views</span> on the same channel. Consistent performance, not one-hit wonders.</div>
+      <span class="nc-num">6 Videos</span>
+      <div class="nc-title">Each Crossed 50K Views at Jar</div>
+      <div class="nc-desc">6 separate long-form videos on <span class="nc-highlight">Jar's Telugu YouTube channel</span> each surpassed 50K views organically. Consistent performance, not a one-off.</div>
     </div>
 
     <div class="num-card">
@@ -1326,8 +1333,9 @@
           <p class="work-desc">Took ownership of brand marketing, YouTube and performance creatives from day one. From scripting Dulquer Salmaan's videos on set to coordinating TV integrations for major Telugu reality shows, handled it all end to end.</p>
           <div class="work-stat-row">
             <div class="work-stat"><span>7,89,461</span>App installs from performance creatives</div>
-            <div class="work-stat"><span>3</span>Videos crossing 1 lakh views</div>
-            <div class="work-stat"><span>5</span>Videos crossing 50K views</div>
+            <div class="work-stat"><span>1M+ each</span>Multiple shortform videos crossed 1M views</div>
+            <div class="work-stat"><span>3 videos</span>Each crossed 1 lakh views (long-form)</div>
+            <div class="work-stat"><span>6 videos</span>Each crossed 50K views (long-form)</div>
           </div>
         </div>
       </div>
@@ -1357,7 +1365,7 @@
           <a href="https://x.com/sudhakarudumula" target="_blank" class="company-link">View Profile →</a>
         </div>
         <div class="work-card-right">
-          <div class="work-role">Social Media Manager</div>
+          <div class="work-role">Content Strategist / Social Media Manager</div>
           <p class="work-desc">Treated every day as an experiment. Cracked what the Hyderabad audience responds to and wrote posts that went viral repeatedly. Took the account from 5,000 impressions a month to 1 crore impressions a month in 7 months.</p>
           <div class="work-stat-row">
             <div class="work-stat"><span>1 Crore</span>Impressions per month</div>
@@ -1844,12 +1852,4 @@
     slides.forEach(s => s.classList.remove('active'));
     dots.forEach(d => d.classList.remove('active'));
     slides[n].classList.add('active');
-    dots[n].classList.add('active');
-    ss.dataset.current = n;
-  }
-  function next(id) {
-    const ss = document.getElementById(id);
-    const total = ss.querySelectorAll('.slide').length;
-    const cur = parseInt(ss.dataset.current || 0);
-    goTo(id, (cur + 1) % total);
-  }
+    dots[n].classList.add
