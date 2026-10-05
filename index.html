@@ -1898,32 +1898,12 @@
 .gallery-mosaic .gm-cell:hover .gm-zoom { opacity:1; }
 @media (max-width:900px) { .gallery-mosaic { column-count:2 !important; } }
 @media (max-width:620px) { .wg-local-videos { grid-template-columns:1fr; } .gallery-mosaic { column-count:1 !important; } .gallery-sub { margin-top:-20px; } }
-</style>
-<style id="yis-embed-styles">
-.wg-local-video .YISEmbed {
-  display:block;
-  width:100%;
-  margin:0;
-  min-height:0;
-  aspect-ratio:16/9;
-  overflow:hidden;
-  border-radius:12px;
-  background:#111827;
-}
-.wg-local-video .YISEmbed iframe,
-.wg-local-video .YISEmbed video {
-  display:block;
-  width:100% !important;
-  height:100% !important;
-  border:0;
-}
-.wg-video-feature .wg-local-video .YISEmbed { aspect-ratio:16/9; }
-</style>
-</head>
+</style><style>
+.video-fallback{display:none;padding:12px;font-size:13px;opacity:.7;text-align:center}.video-error .video-fallback{display:block}
+</style></head>
 <body>
 <div id="cursor-ring"></div>
 <div id="cursor-label"></div>
-
 <!-- NAV -->
 <nav>
 <div class="nav-logo">BV<em>.</em></div>
@@ -1963,7 +1943,6 @@
 </div>
 </div>
 </div>
-
 </section>
 <!-- BRAND STRIP -->
 <div class="marquee-wrap">
@@ -2223,29 +2202,29 @@
 <div class="wg-video-showcase">
 <div class="wg-video-feature">
 <figure class="wg-local-video">
-<blockquote class="YISEmbed" data-id="VZWZuYqirN"></blockquote>
+<video controls="True" playsinline="True" preload="metadata"><source src="https://res.cloudinary.com/hmqcpp22/video/upload/v1791199357/wc-bb-medal.mp4" type="video/mp4"/><span class="video-fallback">This video could not be loaded. Please check the portfolio files were uploaded together.</span></video>
 <figcaption>White Gold × Bigg Boss Medal</figcaption>
 </figure>
 </div>
 <div class="wg-local-videos">
 <figure class="wg-local-video">
-<blockquote class="YISEmbed" data-id="vk2zTUrlGu"></blockquote>
+<video controls="True" playsinline="True" preload="metadata"><source src="https://res.cloudinary.com/hmqcpp22/video/upload/v1791199348/captaincy-medal-01.mp4" type="video/mp4"/><span class="video-fallback">This video could not be loaded. Please check the portfolio files were uploaded together.</span></video>
 <figcaption>Bigg Boss Captaincy Medal 01</figcaption>
 </figure>
 <figure class="wg-local-video">
-<blockquote class="YISEmbed" data-id="89ro9mN1qa"></blockquote>
+<video controls="True" playsinline="True" preload="metadata"><source src="https://res.cloudinary.com/hmqcpp22/video/upload/v1791199347/captaincy-medal-02.mp4" type="video/mp4"/><span class="video-fallback">This video could not be loaded. Please check the portfolio files were uploaded together.</span></video>
 <figcaption>Bigg Boss Captaincy Medal 02</figcaption>
 </figure>
 <figure class="wg-local-video">
-<blockquote class="YISEmbed" data-id="oyZAlnJKMZ"></blockquote>
+<video controls="True" playsinline="True" preload="metadata"><source src="https://res.cloudinary.com/hmqcpp22/video/upload/v1791199380/saregamapa-01.mp4" type="video/mp4"/><span class="video-fallback">This video could not be loaded. Please check the portfolio files were uploaded together.</span></video>
 <figcaption>White Gold × Saregamapa 01</figcaption>
 </figure>
 <figure class="wg-local-video">
-<blockquote class="YISEmbed" data-id="lkhPFan54a"></blockquote>
+<video controls="True" playsinline="True" preload="metadata"><source src="https://res.cloudinary.com/hmqcpp22/video/upload/v1791199387/saregamapa-02.mp4" type="video/mp4"/><span class="video-fallback">This video could not be loaded. Please check the portfolio files were uploaded together.</span></video>
 <figcaption>White Gold × Saregamapa 02</figcaption>
 </figure>
 <figure class="wg-local-video">
-<blockquote class="YISEmbed" data-id="jLSNMdQUor"></blockquote>
+<video controls="True" playsinline="True" preload="metadata"><source src="https://res.cloudinary.com/hmqcpp22/video/upload/v1791199348/saregamapa-03.mp4" type="video/mp4"/><span class="video-fallback">This video could not be loaded. Please check the portfolio files were uploaded together.</span></video>
 <figcaption>White Gold × Saregamapa 03</figcaption>
 </figure>
 </div>
@@ -2580,7 +2559,6 @@
 </a>
 </div>
 </div>
-
 </div>
 </div>
 </section>
@@ -2703,7 +2681,6 @@
     if (dots[n]) dots[n].classList.add('active');
   }
 </script>
-
 <div id="cmdk">
 <div class="cmdk-box">
 <input autocomplete="off" id="cmdkInput" placeholder="Jump to anything..." spellcheck="false"/>
@@ -3121,6 +3098,7 @@
   });
 })();
 </script>
-<script src="https://yourimageshare.com/embed.js"></script>
-</body>
+<script>
+document.querySelectorAll('video').forEach(function(v){v.addEventListener('error',function(){v.classList.add('video-error');});});
+</script></body>
 </html>
